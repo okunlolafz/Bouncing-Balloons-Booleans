@@ -1,6 +1,6 @@
-# Bouncing Balloons Booleans Game
+# Bouncing Balloons Booleans
 
-Welcome to the Bouncing Balloons Booleans game repository! This Unity game, developed as Challenge 3 in a Unity Game Development bootcamp, brings together balloons, collisions, and a bit of boolean fun. Let's explore the game and its components.
+Welcome to the Bouncing Balloons Booleans game repository! This Unity game challenges players to control a floating balloon, avoiding bombs and collecting money for a dazzling fireworks display. The game is an outcome of Challenge 3 from a Unity Game Development bootcamp.
 
 ## Table of Contents
 
@@ -13,49 +13,48 @@ Welcome to the Bouncing Balloons Booleans game repository! This Unity game, deve
 
 ## Overview
 
-Bouncing Balloons Booleans is a delightful Unity game where players interact with bouncing balloons. The game involves spawning balloons at random intervals, avoiding collisions, and managing balloon destruction when they go beyond certain positional limits. It's a simple yet engaging experience suitable for various audiences.
+Bouncing Balloons Booleans is a casual Unity game where players control a balloon, trying to stay afloat while avoiding bombs and collecting money. The game features a simple yet challenging gameplay loop, providing an entertaining experience.
 
 ## Game Mechanics
 
-The game features the following key mechanics:
+The game includes the following key mechanics:
 
-- **Spawn Management:** Balloons are spawned at random intervals from the top of the play area, creating a dynamic and unpredictable environment.
-- **Collision Detection:** Collisions with other game objects trigger balloon destruction, providing a challenging aspect to the gameplay.
-- **Destruction Limits:** Balloons are destroyed if they go beyond specified positional limits, ensuring a tidy and manageable play area.
-- **Player Interaction:** Players can launch a dog into the air using the spacebar, adding a fun and strategic element to the game.
+- **Balloon Control:** Players control a balloon that floats upward when the spacebar is pressed.
+- **Obstacle Spawning:** Bombs and money objects are spawned at random intervals from the right side of the screen.
+- **Collision Detection:** Collisions with bombs result in an explosion and the game ending. Money collisions trigger fireworks.
+- **Ground Interaction:** The balloon bounces back up when colliding with the ground.
 
 ## How to Play
 
-1. **Dodge Balloons:**
-   - Use your arrow keys or A/D keys to move your character left or right to dodge incoming balloons.
+1. **Stay Afloat:**
+   - Use the spacebar to control the balloon's upward movement. Keep the balloon afloat to avoid collisions.
 
-2. **Launch Dogs:**
-   - Press the spacebar to launch your adorable pet dog into the air. The dog can only be launched when positioned at the spawn origin.
+2. **Avoid Bombs:**
+   - Colliding with bombs ends the game. Dodge bombs to survive longer.
 
-3. **Scoring:**
-   - The game is endless, and the challenge is to achieve the highest score possible by dodging balloons and launching dogs.
+3. **Collect Money:**
+   - Collect money objects to trigger a festive fireworks display.
+
+4. **Bounce Back:**
+   - If the balloon collides with the ground, it bounces back up.
 
 ## Scripts
 
-### 1. `SpawnManagerX.cs`
+### 1. `RepeatBackgroundX.cs`
 
-This script manages the spawning of random balloons at the top of the play area.
+This script manages the seamless repetition of the background, creating a continuous scrolling effect.
 
-### 2. `DetectCollisionsX.cs`
+### 2. `SpawnManagerX.cs`
 
-Handles the detection of collisions, destroying the balloon game object upon contact.
+Controls the spawning of bombs and money objects at random intervals.
 
-### 3. `DestroyOutOfBoundsX.cs`
+### 3. `MoveLeftX.cs`
 
-Destroys game objects (both balloons and dogs) if they go beyond specified positional limits.
+Moves game objects (excluding the background) to the left. Objects are destroyed if they go off-screen.
 
-### 4. `MoveForwardX.cs`
+### 4. `PlayerControllerX.cs`
 
-Moves game objects forward at a specified speed.
-
-### 5. `PlayerControllerX.cs`
-
-Controls the player's ability to launch their dog into the air using the spacebar.
+Manages the player's balloon control, collision detection, and game state. It includes features such as upward floating, collision responses, and the ability to trigger fireworks.
 
 ## Contributing
 
@@ -72,4 +71,4 @@ This project is licensed under the [MIT License](LICENSE), allowing for both per
 
 Feel free to reach out with any questions, feedback, or suggestions.
 
-Enjoy bouncing balloons and launching dogs in Bouncing Balloons Booleans!
+Enjoy playing and developing Bouncing Balloons Booleans!
